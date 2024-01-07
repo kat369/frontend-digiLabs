@@ -1,0 +1,68 @@
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .swiper-container {
+    animation: scrollreveal ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+    overflow: hidden;
+    padding: 60px 0;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+   margin-right: 200px;
+   margin-left: 200px;
+   
+  }
+  
+  .swiper-container:before,
+  .swiper-container:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  .swiper-container:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+  
+  .swiper-container:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  }
+  
+  .swiper-container:hover .swiper-container-logos {
+    animation-play-state: paused;
+  }
+  
+  .swiper-container-logos {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+  }
+  
+  .swiper-container-logos img {
+    height: 30px;
+    margin: 0 40px;
+  }
+  @keyframes scrollreveal {
+    
+    from{
+     opacity: 0;
+     transform: translateY(100px);
+    } 
+    to{
+     opacity: 1;
+     transform: translateY(0px);
+    }
+ }
+

@@ -1,0 +1,11 @@
+.mobile-whole-container{
+    display: flex;
+    animation: scrollreveal ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+    padding: 20px 0px;
+    margin-bottom: 150px;
+}
